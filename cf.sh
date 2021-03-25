@@ -14,7 +14,7 @@ pushplus=自己的token
 ServerChan=自己的token
 ServerChanTurbo=自己的token
 Telegrambot=自己的token
-bandwidth=50
+bandwidth=80
 speed=bandwidth*128*1024
 starttime=`date +'%Y-%m-%d %H:%M:%S'`
 while true
