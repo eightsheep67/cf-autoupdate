@@ -13,17 +13,13 @@ wget https://raw.githubusercontent.com/eightsheep67/cf-autoupdate/main/cf.sh
 
 <img src="./image/1.png" width=80% alt="显示不了图片，开一下VPN吧🛫">
 
+* 进入 系统-计划任务添加一下命令
 * 0代表分9代表小时，意思是9：00整开始运行脚本
 ```Bash
 
 0 9 * * * bash /usr/dns/cf.sh
 0 20 * * * bash /usr/dns/cf.sh
 ```
-* 添加计划任务
-* 依次进入 系统-计划任务
-* 添加一下命令
-
-<img src="./image/2.png" width=80% alt="显示不了图片，开一下VPN吧🛫">
 
 * 修改你的节点服务器地址为192.168.1.1，然后端口号为8443，然后手动执行一次命令后建立端口端口转发，不然你的节点都暂时用不了：
 ```Bash
