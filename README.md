@@ -1,5 +1,5 @@
 # 路由器优选IP脚本设置定时更换优选ip
-* 用ssh连接软件连接opewrt
+* ttyd或ssh连接openwrt
 ```Bash
 cd /usr
 mkdir dns
@@ -9,7 +9,7 @@ wget https://raw.githubusercontent.com/eightsheep67/cf-autoupdate/main/cf.sh
 #### 修改cf-openwrt.sh中的两处地方
 * bandwidth 处是带宽选择
 
-* 一处是微信/Telegram推送token
+* 一处你需要push通知的token（可选)
 
 <img src="./image/1.png" width=80% alt="显示不了图片，开一下VPN吧🛫">
 
@@ -25,8 +25,7 @@ wget https://raw.githubusercontent.com/eightsheep67/cf-autoupdate/main/cf.sh
 
 <img src="./image/2.png" width=80% alt="显示不了图片，开一下VPN吧🛫">
 
-* 到这里就完成全部操作了，然后就是等待自动执行。
-* 当然，我们可以手动来执行一次，执行命令：
+* 修改你的节点服务器地址为192.168.1.1，然后端口号为8443，然后手动执行一次命令后建立端口端口转发，不然你的节点都暂时用不了：
 ```Bash
 bash /usr/dns/cf-openwrt.sh
 ```
