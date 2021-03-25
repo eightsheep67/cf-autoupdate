@@ -4,7 +4,7 @@
 cd /usr
 mkdir dns
 cd dns
-wget https://raw.githubusercontent.com/eightsheep67/cf-autoupdate/main/cf-openwrt.sh
+wget https://raw.githubusercontent.com/eightsheep67/cf-autoupdate/main/cf.sh
 ```
 #### 修改cf-openwrt.sh中的两处地方
 * bandwidth 处是带宽选择
