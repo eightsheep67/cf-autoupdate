@@ -26,6 +26,8 @@ tar -zxf CloudflareST_linux_amd64.tar.gz
 chmod +x CloudflareST
 ```
 
+
+
 # 下载本项目脚本
 ```Bash
 cd /usr
@@ -33,6 +35,8 @@ mkdir dns
 cd dns
 wget https://raw.githubusercontent.com/eightsheep67/cf-autoupdate/main/cf.sh
 ```
+
+
 
 # 修改cf.sh中的设置
 * 你需要push通知的token（可选)
@@ -43,11 +47,14 @@ vi /usr/dns/cf.sh
 * 按"i"键进入编辑
 * 修改完成后按"ESC"键，再按":"键，输入wq保存退出
 
+
+
 # 修改节点设置
 * 修改你的节点服务器地址为192.168.1.1，然后端口号为8443，然后手动执行一次命令后建立端口端口转发，不然你的节点都暂时用不了：
 ```Bash
 bash /usr/dns/cf.sh
 ```
+
 
 
 # 添加定时任务
@@ -57,6 +64,8 @@ bash /usr/dns/cf.sh
 0 9 * * * bash /usr/dns/cf.sh
 0 20 * * * bash /usr/dns/cf.sh
 ```
+
+
 
 # 本项目修改于CloudflareSpeedTest及cf-autoupdate
 * 请参考 [CloudflareSpeedTest](https://github.com/XIU2/CloudflareSpeedTest)
