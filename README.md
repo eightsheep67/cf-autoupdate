@@ -66,7 +66,6 @@ bash /usr/dns/cf.sh
 * 0代表分9代表小时，意思是9：00整开始运行脚本
 ```Bash
 0 9 * * * bash /usr/dns/cf.sh
-0 20 * * * bash /usr/dns/cf.sh
 ```
 
 
