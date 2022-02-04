@@ -23,4 +23,4 @@ iptables -t nat -D OUTPUT $(iptables -t nat -nL OUTPUT --line-number | grep $loc
 iptables -t nat -A OUTPUT -p tcp --dport $localport -j DNAT --to-destination ${IP}:$remoteport
 
 # 微信推送最新查找的IP-pushplus推送加
-curl -s -o /dev/null --data "token=$pushplus&title=Cloudflare IP 更新成功！&content= 优选IP ${IP} 速度为 ${SP} Mbps" http://www.pushplus.plus/send
+curl -s -o /dev/null --data "token=$pushplus&title=Cloudflare IP 更新成功！&content= 优选IP ${IP} 速度为 ${SP} MBps" http://www.pushplus.plus/send
