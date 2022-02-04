@@ -44,6 +44,7 @@ wget https://raw.githubusercontent.com/eightsheep67/cf-autoupdate/main/cf.sh
 * 还有测速的参数（请参考 [CloudflareSpeedTest](https://github.com/XIU2/CloudflareSpeedTest)）
 * 测速参数 -dn 为下载测速数量， -sl 为下载测速下限，单位为MBps，-tll 为延迟下限，设置90防止被假墙
 * 建议自建测速文件否则可能测速失败（请参考 [CloudflareSpeedTest](https://github.com/XIU2/CloudflareSpeedTest)），通过 -url 添加测速文件地址
+* 通过VI工具修改cf.sh脚本
 ```Bash
 vi /usr/dns/cf.sh
 ```
