@@ -40,7 +40,10 @@ wget https://raw.githubusercontent.com/eightsheep67/cf-autoupdate/main/cf.sh
 
 ### 修改cf.sh中的设置
 * 你需要push通知的token（可选)
+* 更改localport端口号（可选）
 * 还有测速的参数（请参考 [CloudflareSpeedTest](https://github.com/XIU2/CloudflareSpeedTest)）
+* 测速参数 -dn 为下载测速数量， -sl 为下载测速下限，单位为MBps，-tll 为延迟下限，设置90防止被假墙
+* 建议自建测速文件否则可能测速失败（请参考 [CloudflareSpeedTest](https://github.com/XIU2/CloudflareSpeedTest)），通过 -url 添加测速文件地址
 ```Bash
 vi /usr/dns/cf.sh
 ```
@@ -50,7 +53,7 @@ vi /usr/dns/cf.sh
 
 
 ### 修改科学节点设置
-* 修改你的科学节点服务器地址为192.168.1.1，默认端口号为8443（可自行更改），然后手动执行一次命令后建立端口端口转发，不然你的节点都暂时用不了：
+* 修改你的科学节点服务器地址为192.168.1.1，默认端口号为8443（可自行更改），然后手动执行一次命令后建立端口转发，不然你的节点都暂时用不了：
 ```Bash
 bash /usr/dns/cf.sh
 ```
