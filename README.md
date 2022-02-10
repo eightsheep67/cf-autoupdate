@@ -11,7 +11,7 @@ cd /root/CloudflareST
 
 * 下载 CloudflareST 压缩包（自行根据需求替换 URL 中 [版本号] 和 [文件名]）
 ```Bash
-wget https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.0.2/CloudflareST_linux_amd64.tar.gz
+wget https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.0.3/CloudflareST_linux_amd64.tar.gz
 ```
 
 * 解压（同名文件直接覆盖，openwrt的tar工具默认为简易版本需要升级）
