@@ -7,7 +7,7 @@ pushplus=你自己的TOKEN
 cd /usr/dns
 
 # 运行 CloudflareST 测速（自行根据需求修改参数）
-./CloudflareST  -dn 20 -dt 5 -tll 40 -n 1000
+./CloudflareST  -dn 30 -dt 3 -tll 40 -n 1000
 
 # 获取最快 IP的3个IP（从 result.csv 结果文件中获取IP）
 IP1=$(sed -n "2,1p" result.csv | awk -F, '{print $1}')
