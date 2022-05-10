@@ -9,7 +9,7 @@ pushplus=自己的TOKEN
 cd /root/CloudflareST
 
 # 运行 CloudflareST 测速（自行根据需求修改参数）
-./CloudflareST -dn 5 -sl 5 -tll 90
+./CloudflareST -dn 10 -dt 5 -tll 90
 
 # 获取最快 IP（从 result.csv 结果文件中获取第一个 IP）和测速结果
 IP=$(sed -n "2,1p" result.csv | awk -F, '{print $1}')
