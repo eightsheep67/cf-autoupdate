@@ -36,11 +36,12 @@ cd dns
 wget https://raw.githubusercontent.com/eightsheep67/cf-autoupdate/main/cf.sh
 ```
 
-
+###本项目有两个脚本，cf.sh为通用脚本，通过端口转发实现本机所有软件通用。cf_pw.sh为passwall专用，可替换多个节点IP。
 
 ### 修改cf.sh中的设置
 * 你需要push通知的token（可选)
-* 更改localport端口号（默认8443，可选）
+* 企业微信参数（可选，请参考[这里](https://github.com/luolongfei/freenom/wiki/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1)）
+* 更改localport端口号（默认8443，cf_pw.sh无需设置）
 * 还有测速的参数（请参考 [CloudflareSpeedTest](https://github.com/XIU2/CloudflareSpeedTest)）
 * 测速参数 -dn 为下载测速数量， -sl 为下载测速下限，单位为MBps，-tll 为延迟下限，设置90防止被假墙
 * 建议自建测速文件否则可能测速失败（请参考 [CloudflareSpeedTest](https://github.com/XIU2/CloudflareSpeedTest)），通过 -url 添加测速文件地址
@@ -76,11 +77,13 @@ bash /usr/dns/cf.sh
 
 
 
-### 本项目修改于CloudflareSpeedTest及cf-autoupdate
+### 本项目修改于CloudflareSpeedTest及cf-autoupdate，并参考了freenom的wiki
 * 请参考 [CloudflareSpeedTest](https://github.com/XIU2/CloudflareSpeedTest)
 * 请参考 [cf-autoupdate](https://github.com/Lbingyi/cf-autoupdate)
+*  请参考 [freenom](https://github.com/luolongfei/freenom)
 
 ### 特别感谢 ：
 * [XIU2](https://github.com/XIU2)
 * [Lbingyi](https://github.com/Lbingyi)
 * [badafans](https://github.com/badafans/better-cloudflare-ip)
+* [luolongfei](https://github.com/luolongfei)
