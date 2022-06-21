@@ -26,7 +26,11 @@ tar -zxf CloudflareST_linux_amd64.tar.gz
 chmod +x CloudflareST
 ```
 
-
+* 安装bash
+```Bash
+opkg update
+opkg install bash
+```
 
 ### 下载本项目脚本（本项目有两个脚本，cf.sh为通用脚本，通过端口转发实现本机所有软件通用。cf_pw.sh为passwall专用，可替换多个节点IP，自行更改下列命令。）
 ```Bash
@@ -61,7 +65,7 @@ wget https://raw.githubusercontent.com/eightsheep67/cf-autoupdate/main/cf_pw.sh
 * 建议自建测速文件否则可能测速失败（请参考 [CloudflareSpeedTest](https://github.com/XIU2/CloudflareSpeedTest)），通过 -url 添加测速文件地址
 
 
-### 通过VI工具修改脚本
+### 通过VI工具修改脚本（PASSWALL版本脚本名称自行替换成cf_pw.sh）
 ```Bash
 vi /usr/dns/cf.sh
 ```
@@ -84,7 +88,7 @@ bash /usr/dns/cf.sh
 
 
 
-### 添加定时任务
+### 添加定时任务（PASSWALL版本脚本名称自行替换成cf_pw.sh）
 * 进入 系统-计划任务添加一下命令
 * 0代表分，9代表小时，意思是9：00整开始运行脚本
 ```Bash
