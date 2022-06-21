@@ -34,11 +34,11 @@ cd /usr
 mkdir dns
 cd dns
 ```
-# 通用脚本
+#### 通用脚本
 ```Bash
 wget https://raw.githubusercontent.com/eightsheep67/cf-autoupdate/main/cf.sh
 ```
-# PASSWALL专用
+#### PASSWALL专用
 ```Bash
 wget https://raw.githubusercontent.com/eightsheep67/cf-autoupdate/main/cf_pw.sh
 ```
