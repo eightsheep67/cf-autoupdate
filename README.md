@@ -28,16 +28,20 @@ chmod +x CloudflareST
 
 
 
-### 下载本项目脚本
+### 下载本项目脚本（本项目有两个脚本，cf.sh为通用脚本，通过端口转发实现本机所有软件通用。cf_pw.sh为passwall专用，可替换多个节点IP，自行更改下列命令。）
 ```Bash
 cd /usr
 mkdir dns
 cd dns
+```
+# 通用脚本
+```Bash
 wget https://raw.githubusercontent.com/eightsheep67/cf-autoupdate/main/cf.sh
 ```
-
-###本项目有两个脚本，cf.sh为通用脚本，通过端口转发实现本机所有软件通用。cf_pw.sh为passwall专用，可替换多个节点IP。
-
+# PASSWALL专用
+```Bash
+wget https://raw.githubusercontent.com/eightsheep67/cf-autoupdate/main/cf_pw.sh
+```
 
 ### 修改cf.sh中的设置
 * 你需要push通知的token（可选)
