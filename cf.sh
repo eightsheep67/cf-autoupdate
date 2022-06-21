@@ -4,6 +4,9 @@
 localport=8443
 remoteport=443
 pushplus=自己的TOKEN
+corpid='自己的参数'
+appsecret='自己的参数'
+agentid=自己的参数
 
 # 进入 CloudflareST 目录（目录不一样的话自己改）
 cd /root/CloudflareST
@@ -22,5 +25,9 @@ SP=$(sed -n "2,1p" result.csv | awk -F, '{print $6}')
 iptables -t nat -D OUTPUT $(iptables -t nat -nL OUTPUT --line-number | grep $localport | awk '{print $1}')
 iptables -t nat -A OUTPUT -p tcp --dport $localport -j DNAT --to-destination ${IP}:$remoteport
 
-# 微信推送最新查找的IP-pushplus推送加
-curl -s -o /dev/null --data "token=$pushplus&title=Cloudflare IP 更新成功！&content= 优选IP ${IP} 速度为 ${SP} MBps" http://www.pushplus.plus/send
+# pushplus推送加
+# curl -s -o /dev/null --data "token=$pushplus&title=Cloudflare IP 更新成功！&content= 优选IP ${IP} 速度为 ${SP} MBps" http://www.pushplus.plus/send
+
+# 企业微信推送
+accesstoken=$(/usr/bin/curl https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=${corpid}\&corpsecret=${appsecret} | jq -r '.access_token')
+curl -H "Content-Type: application/json;charset=utf-8"  -d "{\"msgtype\": \"text\",\"agentid\": \"${agentid}\",\"touser\": \"@all\",\"text\": {\"content\":\"Cloudflare IP 更新成功！\n&content= 优选IP ${IP} 速度为 ${SP} MBps\"}}" "https://qyapi.weixin.qq.com/cgi-bin/message/send?access_token=${accesstoken}"
