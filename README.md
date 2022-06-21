@@ -76,11 +76,6 @@ vi /usr/dns/cf.sh
 
 ### 修改科学节点设置 （cf_pw.sh不涉及）
 * 修改你的科学节点服务器地址为路由本机IP，如192.168.1.1，端口号为你设置的localport（默认为8443）
-* 部分openwrt不带bash，需先安装
-```Bash
-opkg update
-opkg install bash
-```
 * 然后手动执行一次命令后建立端口转发，不然你的节点都暂时用不了（重启路由后也需要）：
 ```Bash
 bash /usr/dns/cf.sh
