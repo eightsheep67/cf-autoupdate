@@ -26,10 +26,11 @@ tar -zxf CloudflareST_linux_amd64.tar.gz
 chmod +x CloudflareST
 ```
 
-* 安装bash
+* 安装bash和jq
 ```Bash
 opkg update
 opkg install bash
+opkg install jq
 ```
 
 ### 下载本项目脚本（本项目有两个脚本，cf.sh为通用脚本，通过端口转发实现本机所有软件通用。cf_pw.sh为passwall专用，可替换多个节点IP，自行更改下列命令。）
