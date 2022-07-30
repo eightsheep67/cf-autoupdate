@@ -21,6 +21,7 @@ SP2=$(sed -n "3,1p" result.csv | awk -F, '{print $6}')
 # 修改 passwall 里对应节点的 IP（XXXXXX 就是节点 ID，查看/etc/config/passwall文件的node ID）
 uci set passwall.XXXXXXXXXX.address="${IP1}"
 uci set passwall.XXXXXXXXXX.address="${IP2}"
+uci commit
 
 # 微信推送最新查找的IP-pushplus推送加
 # curl -s -o /dev/null --data "token=$pushplus&title=HAProxy Cloudflare IP 更新成功！&content=H01:${IP1}  速度${SP1}MBps<br/>H02:${IP2}  速度${SP2}MBps<br/>H03:${IP3}  速度${SP3}MBps" http://www.pushplus.plus/send
